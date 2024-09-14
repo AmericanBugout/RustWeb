@@ -16,11 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Change Directory
+      run: cd web/
     - name: Build
-      run: |
-        cd web/
-        cargo build --verbose
+      run: cargo build --verbose
     - name: Run tests
-      run: |
-        cd web/
-        cargo test --verbose
+      run: cargo test --verbose
