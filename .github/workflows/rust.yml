@@ -19,6 +19,7 @@ jobs:
     - name: Change to web directory
       run: |
         cd web
+        echo $pwd
     - name: Build
       run: cargo build --verbose
     - name: Run tests
