@@ -16,12 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Change to web directory
-      run: |
-        pwd
     - name: Build
       run: |
         cd web/
         cargo build --verbose
     - name: Run tests
-      run: cargo test --verbose
+      run: |
+        cd web/
+        cargo test --verbose
