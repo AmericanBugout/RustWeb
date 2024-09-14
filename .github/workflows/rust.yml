@@ -18,8 +18,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Change to web directory
       run: |
-        cd web
-        echo "$pwd"
+        ls -lrt
     - name: Build
       run: cargo build --verbose
     - name: Run tests
